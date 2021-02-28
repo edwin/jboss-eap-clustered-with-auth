@@ -19,7 +19,10 @@ docker build -t mykeycloak .
 
 Run image
 ```
-docker run -p 8081:8080 -e PROXY_ADDRESS_FORWARDING=true  -e DB_VENDOR="mysql" -e DB_ADDR="192.168.56.1" -e DB_USER="keycloak" -e DB_PASSWORD="password" -e DB_PORT="3306" -e DB_DATABASE="keycloak_db" --add-host=HOST:192.168.56.1  mykeycloak
+docker run -p 8081:8080 -e PROXY_ADDRESS_FORWARDING=true \
+ -e DB_VENDOR="mysql" -e DB_ADDR="192.168.56.1" -e DB_USER="keycloak" \
+ -e DB_PASSWORD="password" -e DB_PORT="3306" -e DB_DATABASE="keycloak_db" \
+ --add-host=HOST:192.168.56.1  mykeycloak
 ```
 
 Blog
